@@ -1,0 +1,10 @@
+name: tts
+description: 语音 TTS（覆盖系统默认，4 合 1 自动回退，读取 openclaw.json 配置，输出 OPUS 格式）
+handler: node ${SKILL_DIR}/tts-wrapper.mjs
+input:
+  type: text
+  description: 要合成语音的文字
+output:
+  type: file
+  format: opus
+  description: OPUS 格式音频文件路径（飞书/Telegram）
